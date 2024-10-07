@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checklist de Carretas e Bitrens</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="assets/urla2.jpeg" alt="Logotipo" class="logo"> <!-- Logotipo -->
+            <h1>Checklist de Inspeção para Carretas e Bitrens</h1>
+        </div>
+        <div class="form-section">
+            <h2>Informações do Motorista</h2>
+            <form id="driverInfoForm">
+                <input type="text" id="driverName" placeholder="Nome do Motorista" required>
+                <input type="text" id="registration" placeholder="Matrícula" required>
+                <input type="text" id="tacho" placeholder="Tacógrafo" required>
+                <input type="text" id="fleetNumber" placeholder="Número da Frota" required>
+                <input type="datetime-local" id="dateTime" required>
+            </form>
+        </div>
+        <div class="grid">
+            <ul id="checklist">
+                <li class="item">
+                    <div class="box">
+                        <span>Verificar pneus</span>
+                        <button class="yes">Conforme</button>
+                        <button class="no">Não Conforme</button>
+                    </div>
+                </li>
+                <li class="item">
+                    <div class="box">
+                        <span>Verificar luzes</span>
+                        <button class="yes">Conforme</button>
+                        <button class="no">Não Conforme</button>
+                    </div>
+                </li>
+                <li class="item">
+                    <div class="box">
+                        <span>Verificar freios</span>
+                        <button class="yes">Conforme</button>
+                        <button class="no">Não Conforme</button>
+                    </div>
+                </li>
+                <li class="item">
+                    <div class="box">
+                        <span>Verificar documentos</span>
+                        <button class="yes">Conforme</button>
+                        <button class="no">Não Conforme</button>
+                    </div>
+                </li>
+                <li class="item">
+                    <div class="box">
+                        <span>Verificar estado da carroceria</span>
+                        <button class="yes">Conforme</button>
+                        <button class="no">Não Conforme</button>
+                    </div>
+                </li>
+                <li class="item">
+                    <div class="box">
+                        <span>Verificar nível de óleo</span>
+                        <button class="yes">Conforme</button>
+                        <button class="no">Não Conforme</button>
+                    </div>
+                </li>
+                <li class="item">
+                    <div class="box">
+                        <span>Verificar sistema de arrefecimento</span>
+                        <button class="yes">Conforme</button>
+                        <button class="no">Não Conforme</button>
+                    </div>
+                </li>
+                <li class="item">
+                    <div class="box">
+                        <span>Verificar vazamentos de combustível</span>
+                        <button class="yes">Conforme</button>
+                        <button class="no">Não Conforme</button>
+                    </div>
+                </li>
+                <li class="item">
+                    <div class="box">
+                        <span>Verificar pressão dos pneus</span>
+                        <button class="yes">Conforme</button>
+                        <button class="no">Não Conforme</button>
+                    </div>
+                </li>
+                <li class="item">
+                    <div class="box">
+                        <span>Verificar funcionamento do motor</span>
+                        <button class="yes">Conforme</button>
+                        <button class="no">Não Conforme</button>
+                    </div>
+                </li>
+                <li class="item">
+                    <div class="box">
+                        <span>Verificar estado das correias</span>
+                        <button class="yes">Conforme</button>
+                        <button class="no">Não Conforme</button>
+                    </div>
+                </li>
+                <li class="item">
+                    <div class="box">
+                        <span>Verificar sistema de exaustão</span>
+                        <button class="yes">Conforme</button>
+                        <button class="no">Não Conforme</button>
+                    </div>
+                </li>
+                <li class="item">
+                    <div class="box">
+                        <span>Verificar sistema de suspensão</span>
+                        <button class="yes">Conforme</button>
+                        <button class="no">Não Conforme</button>
+                    </div>
+                </li>
+                <li class="item">
+                    <div class="box">
+                        <span>Verificar cinto de segurança</span>
+                        <button class="yes">Conforme</button>
+                        <button class="no">Não Conforme</button>
+                    </div>
+                </li>
+                <li class="item">
+                    <div class="box">
+                        <span>Verificar funcionamento do ar-condicionado</span>
+                        <button class="yes">Conforme</button>
+                        <button class="no">Não Conforme</button>
+                    </div>
+                </li>
+                <li class="item">
+                    <div class="box">
+                        <span>Verificar sistema de aquecimento</span>
+                        <button class="yes">Conforme</button>
+                        <button class="no">Não Conforme</button>
+                    </div>
+                </li>
+                <li class="item">
+                    <div class="box">
+                        <span>Verificar funcionamento do sistema de direção</span>
+                        <button class="yes">Conforme</button>
+                        <button class="no">Não Conforme</button>
+                    </div>
+                </li>
+                <li class="item">
+                    <div class="box">
+                        <span>Verificar espelhos retrovisores</span>
+                        <button class="yes">Conforme</button>
+                        <button class="no">Não Conforme</button>
+                    </div>
+                </li>
+                <li class="item">
+                    <div class="box">
+                        <span>Verificar funcionamento do sistema de frenagem</span>
+                        <button class="yes">Conforme</button>
+                        <button class="no">Não Conforme</button>
+                    </div>
+                </li>
+                <li class="item">
+                    <div class="box">
+                        <span>Verificar condição das luzes de freio</span>
+                        <button class="yes">Conforme</button>
+                        <button class="no">Não Conforme</button>
+                    </div>
+                </li>
+                <li class="item">
+                    <div class="box">
+                        <span>Verificar funcionamento do sistema de iluminação</span>
+                        <button class="yes">Conforme</button>
+                        <button class="no">Não Conforme</button>
+                    </div>
+                </li>
+                <li class="item">
+                    <div class="box">
+                        <span>Verificar estado do eixo e suspensão</span>
+                        <button class="yes">Conforme</button>
+                        <button class="no">Não Conforme</button>
+                    </div>
+                </li>
+                <li class="item">
+                    <div class="box">
+                        <span>Verificar funcionamento do sistema de carga (se aplicável)</span>
+                        <button class="yes">Conforme</button>
+                        <button class="no">Não Conforme</button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div id="result"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
